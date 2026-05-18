@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const authRoutes = require('./src/routes/authRoutes');
 const helmet = require('helmet');
 const morgan = require('morgan');
 require('dotenv').config();
@@ -20,6 +21,7 @@ pool.query('SELECT NOW()', (err, res) => {
     console.log(' Connected to PostgreSQL database:', res.rows[0].now);
     }
 });
+app.use('/api/auth',authRoutes);
 
 app.get('/', (req, res) => {
 res.json({message:'RideShare API is running!'});
