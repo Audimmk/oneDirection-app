@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./src/routes/authRoutes');
 const rideRoutes = require('./src/routes/rideRoutes');
+const driverRoutes = require('./src/routes/driverRoutes');
 const helmet = require('helmet');
 const morgan = require('morgan');
 require('dotenv').config();
@@ -24,7 +25,7 @@ pool.query('SELECT NOW()', (err, res) => {
 });
 app.use('/api/auth',authRoutes);
 app.use('/api/rides', rideRoutes);
-
+app.use('/api/drivers', driverRoutes);
 app.get('/', (req, res) => {
 res.json({message:'RideShare API is running!'});
 });
