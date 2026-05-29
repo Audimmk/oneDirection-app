@@ -5,6 +5,7 @@ const authRoutes = require('./src/routes/authRoutes');
 const rideRoutes = require('./src/routes/rideRoutes');
 const driverRoutes = require('./src/routes/driverRoutes');
 const trackingRoutes = require('./src/routes/trackingRoutes');
+const paymentRoutes = require('./src/routes/paymentRoutes');
 const helmet = require('helmet');
 const morgan = require('morgan');
 require('dotenv').config();
@@ -33,6 +34,7 @@ app.use('/api/auth',authRoutes);
 app.use('/api/rides', rideRoutes);
 app.use('/api/drivers', driverRoutes);
 app.use('/api/tracking', trackingRoutes);
+app.use('/api/payments', paymentRoutes);
 app.get('/', (req, res) => {
 res.json({message:'RideShare API is running!'});
 });
