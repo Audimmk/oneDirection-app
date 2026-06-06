@@ -18,6 +18,7 @@ import WalletScreen from '../screens/passenger/WalletScreen';
 import ProfileScreen from '../screens/passenger/ProfileScreen';
 import RideDetailsScreen from '../screens/passenger/RideDetailsScreen';
 import ActiveRideScreen from '../screens/passenger/ActiveRideScreen';
+import PaymentScreen from '../screens/passenger/PaymentScreen';
 
 //Driver Screens
 import DriverHomeScreen from '../screens/driver/HomeScreen';
@@ -86,6 +87,7 @@ const AppNavigator = () => {
                     <Stack.Screen name="PassengerApp" component={PassengerTabs} />
                     <Stack.Screen name="RideDetails" component={RideDetailsScreen} />
                     <Stack.Screen name="ActiveRide" component={ActiveRideScreen} />
+                    <Stack.Screen name="Payment" component={PaymentScreen} />
                 )}
             </Stack.Navigator>
         </NavigationContainer>
