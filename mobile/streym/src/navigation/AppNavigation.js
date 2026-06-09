@@ -13,7 +13,7 @@ import RegisterScreen from '../screens/RegisterScreen';
 
 //Passenger Screens
 import PassengerHomeScreen from '../screens/passenger/HomeScreen';
-import RideSearchScreen from '../screens/passenger/RidesScreen';
+import RidesScreen from '../screens/passenger/RidesScreen';
 import WalletScreen from '../screens/passenger/WalletScreen';
 import ProfileScreen from '../screens/passenger/ProfileScreen';
 import RideDetailsScreen from '../screens/passenger/RideDetailsScreen';
@@ -75,7 +75,7 @@ const AppNavigator = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                {!user ? (
+                { !user ? (
                     <>
                         <Stack.Screen name="Welcome" component={welcomeScreen} />
                         <Stack.Screen name="Login" component={LoginScreen} />
@@ -84,10 +84,12 @@ const AppNavigator = () => {
                 ) : user.role === 'driver' ? (
                     <Stack.Screen name="DriverApp" component={DriverTabs} />
                 ) : (
+                    <>
                     <Stack.Screen name="PassengerApp" component={PassengerTabs} />
                     <Stack.Screen name="RideDetails" component={RideDetailsScreen} />
                     <Stack.Screen name="ActiveRide" component={ActiveRideScreen} />
                     <Stack.Screen name="Payment" component={PaymentScreen} />
+                    </>
                 )}
             </Stack.Navigator>
         </NavigationContainer>
