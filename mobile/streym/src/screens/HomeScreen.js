@@ -35,7 +35,7 @@ const PassengerHomeScreen = ({ navigation }) => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <View>
-                    <Text style={styles.greeting}>Hello,</Text>
+                    <Text style={styles.greeting}>Good morning,</Text>
                     <Text style={styles.name}>{user?.full_name} 👋</Text>
                 </View>
                 <TouchableOpacity style={styles.notificationIcon}>

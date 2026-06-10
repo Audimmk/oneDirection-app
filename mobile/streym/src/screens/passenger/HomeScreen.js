@@ -11,7 +11,7 @@ import { useAuth } from '../../context/AuthContext';
 import { rideService } from '../../services/api';
 import { COLORS } from '../../utils/constants';
 
-const HomeScreen = ({ navigation }) => {
+const PassengerHomeScreen = ({ navigation }) => {
     const { user } = useAuth(),
     const [rides, setRides] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -35,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <View>
-                    <Text style={styles.greeting}>Hello,</Text>
+                    <Text style={styles.greeting}>Good morning,</Text>
                     <Text style={styles.name}>{user?.full_name} 👋</Text>
                 </View>
                 <TouchableOpacity style={styles.notificationIcon}>
@@ -205,4 +205,4 @@ bookButtonText: {
     fontWeight: 'bold',
 },
 });
-export default HomeScreen;
+export default PassengerHomeScreen;
