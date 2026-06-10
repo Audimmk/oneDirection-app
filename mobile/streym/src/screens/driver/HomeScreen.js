@@ -5,7 +5,7 @@ import { View,
        TouchableOpacity,
     ScrollView,
 Switch, } from 'react-native';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { rideService} from '../../services/api';
 import { COLORS } from '../../utils/constants';
 
