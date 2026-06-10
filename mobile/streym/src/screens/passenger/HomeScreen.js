@@ -12,7 +12,7 @@ import { rideService } from '../../services/api';
 import { COLORS } from '../../utils/constants';
 
 const PassengerHomeScreen = ({ navigation }) => {
-    const { user } = useAuth(),
+    const { user } = useAuth();
     const [rides, setRides] = useState([]);
     const [loading, setLoading] = useState(true);
 
